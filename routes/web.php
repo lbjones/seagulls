@@ -16,7 +16,7 @@ Route::get('/', function () {
 });
 
 Route::get('/exterior', function () {
-    $exterior_files = Storage::files('/images/exterior/');
+    $exterior_files = Storage::files('/images/exterior');
     return view('gallery')->with([
         'files' => $exterior_files
     ]);
