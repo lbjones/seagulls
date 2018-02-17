@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <style type="text/css">
+        body {
+            background-color: #000000;
+            color: #FFFFFF;
+                        
+        }
+         .thumb {
+             width: 200px;
+             height: 150px;
+             margin: 3px auto 3px auto;
+
+
+         }
+        
+        #photo 
+        { width: 600px; 
+          height: 450px;
+            margin: 0 auto 10px auto;
+            display: block;
+        }
+
+        h1 {
+            font-size: 32pt;
+            text-align: center;
+        }
+
+
+        h2 {
+            font-size: 18pt;
+            text-align: center;
+        }
+        
+        h3 {
+            font-size: 14pt;
+            text-align: center;
+        }
+
+        h3 a{color:rgb(255, 72, 0);}
+        h3 a:visited{color:rgb(255, 72, 0);}
+
+        #wrapper 
+        { 
+            width: 85vw;
+            margin: 0px auto 0px auto;
+        }
+
+        #thumbwrapper {
+            display: flex;
+            height: 300px;
+            flex-flow: row wrap;
+        }
+
+        #logo {
+            width: 200px;
+            margin: 0 auto 10px auto;
+            display: block;
+        }
+    </style>
+    @yield('css')
+
+    <script type="text/javascript">
+        function swap(elem) {            
+            document.getElementById("photo").src = elem.src;
+        }
+    </script>
+    @yield('js')
+</head>
+<body>
+<div id="wrapper">
+    <h1>The SEAGull</h1>
+    <h2>Photos</h2>
+    <h3>
+        @if (route('exterior') == url()->current())
+            Exterior
+        @else
+            <a href="{{ route('exterior') }}">Exterior</a>
+        @endif
+        &nbsp;
+        @if (route('interior') == url()->current())
+            Interior
+        @else
+            <a href="{{ route('interior') }}">Interior</a>
+        @endif
+        
+    </h3>
+    @yield('page')
+</div>
+</body>
+</html>
