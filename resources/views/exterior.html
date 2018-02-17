@@ -1,0 +1,85 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <style type="text/css">
+        body {
+            background-color: #000000;
+            color: #FFFFFF;
+                        
+        }
+         .thumb {
+             width: 200px;
+             height: 150px;
+             margin: 3px auto 3px auto;
+
+
+         }
+        
+        #photo 
+        { width: 600px; 
+          height: 450px;
+            margin: 0 auto 10px auto;
+            display: block;
+        }
+
+        h1 {
+            font-size: 32pt;
+            text-align: center;
+        }
+
+
+        h2 {
+            font-size: 18pt;
+            text-align: center;
+        }
+        
+        #wrapper 
+        { 
+            width: 85vw;
+            margin: 0px auto 0px auto;
+        }
+
+        #thumbwrapper {
+            display: flex;
+            height: 300px;
+            flex-flow: row wrap;
+        }
+
+        #logo {
+            width: 200px;
+            margin: 0 auto 10px auto;
+            display: block;
+        }
+    </style>
+    <script type="text/javascript">
+        function swap(elem) {
+            
+            document.getElementById("photo").src = elem.src;
+        }
+    </script>
+</head>
+<body>
+<div id="wrapper">
+    <h1>The SEAGull</h1>
+    <h2>Photos</h2>
+    <img src="storage/img/concept-car-lincoln.jpg" id="photo"/>
+    <div id="thumbwrapper">
+        <img src="storage/img/concept-car-lincoln.jpg" onclick="swap(this)" class="thumb" />
+        <img src="storage/img/concept-car-opel-back.jpg" onclick="swap(this)" class="thumb" />
+        <img src="storage/img/concept-car-opel-front.jpg" onclick="swap(this)" class="thumb" />
+        <img src="storage/img/concept-car-opel-side-closed.jpg" onclick="swap(this)" class="thumb" />
+        <img src="storage/img/concept-car-opel-side-open.jpg" onclick="swap(this)" class="thumb" />
+        <img src="storage/img/concept-car-opel-front.jpg" onclick="swap(this)" class="thumb" />
+        <img src="storage/img/concept-car-opel-side-closed.jpg" onclick="swap(this)" class="thumb" />
+        <img src="storage/img/concept-car-opel-side-open.jpg" onclick="swap(this)" class="thumb" />
+
+    </div>
+
+</div>
+    
+
+</body>
+</html>
