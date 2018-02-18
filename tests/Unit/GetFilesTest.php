@@ -27,4 +27,20 @@ class GetFilesTest extends TestCase
 
         $this->assertEquals(2, count($returned_files));
     }
+
+    public function testSort()
+    {
+        $target_dir = storage_path() . '/temp';
+        Storage::makeDirectory($target_dir);
+
+        Storage::put($target_dir . '/file2.jpg', '');
+        Storage::put($target_dir . '/file1.jpg', '');
+
+        $controller = new \App\Http\Controllers\PhotoController();
+        $returned_files = $controller->get_files($target_dir);
+
+        $this->assertEquals('file1.jpg', basename($returned_files[0]));
+        $this->assertEquals('file2.jpg', basename($returned_files[1]));
+    
+    }
 }

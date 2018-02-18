@@ -21,7 +21,8 @@ class PhotoController extends Controller
     }
 
     function get_files ($dir) {
-        return Storage::files($dir);
-    
+        $files = Storage::files($dir);
+        sort($files);
+        return $files;    
     }
 }
