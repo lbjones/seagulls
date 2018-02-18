@@ -22,7 +22,14 @@ class PhotoController extends Controller
 
     function get_files ($dir) {
         $files = Storage::files($dir);
-        sort($files);
-        return $files;    
+        $imagefiles = [];
+        foreach ($files as $file) {
+            if (in_array(strtolower(pathinfo($file)['extension']),['jpg','png','jpeg']))
+            {
+                $imagefiles[] = $file;
+            }
+        }
+        sort($imagefiles);
+        return $imagefiles;    
     }
 }
