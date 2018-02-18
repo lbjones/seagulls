@@ -15,16 +15,6 @@ Route::get('/', function () {
     return redirect('/exterior');
 });
 
-Route::get('/exterior', function () {
-    $exterior_files = Storage::files('/images/exterior');
-    return view('gallery')->with([
-        'files' => $exterior_files
-    ]);
-})->name('exterior');
+Route::get('/exterior', 'PhotoController@exterior')->name('exterior');
 
-Route::get('/interior', function () {
-    $interior_files = Storage::files('/images/interior');
-    return view('gallery')->with([
-        'files' => $interior_files
-    ]);
-})->name('interior');
+Route::get('/interior', 'PhotoController@interior')->name('interior');
