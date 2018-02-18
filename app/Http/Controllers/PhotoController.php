@@ -27,8 +27,10 @@ class PhotoController extends Controller
         return view('information');
     }
     
-    function postInformation (Request $request) {
-        dd($request->all());
+    function postInformation (Request $r) {
+        Storage::put(storage_path() . '/information.csv',
+            implode(',', [$r->input('fname'), $r->input('lname'), $r->input('email'), $r->input('phone')])
+        );
     }
 
     function pricing () {
