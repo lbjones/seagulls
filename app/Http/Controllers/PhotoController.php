@@ -11,7 +11,6 @@ class PhotoController extends Controller
         return view('gallery')->with([
             'files' => $this->get_files('/images/exterior')
         ]);
-
     }
 
     function interior () {
@@ -26,6 +25,10 @@ class PhotoController extends Controller
 
     function information () {
         return view('information');
+    }
+
+    function pricing () {
+        return view('pricing');
     }
 
     function get_files ($dir) {
