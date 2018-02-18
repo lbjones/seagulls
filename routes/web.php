@@ -25,3 +25,5 @@ Route::get('/information', 'PhotoController@information')->name('information');
 Route::post('/information', 'PhotoController@postInformation');
 
 Route::get('/pricing', 'PhotoController@pricing')->name('pricing');
+
+Route::get('/videos', 'PhotoController@videos')->name('videos');
