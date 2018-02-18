@@ -97,7 +97,13 @@
             More Information
         @else
             <a href="{{ route('information') }}">More Information</a>
-        @endif      
+        @endif
+        &nbsp;&nbsp;
+        @if (route('pricing') == url()->current())
+            Pricing
+        @else
+            <a href="{{ route('pricing') }}">Pricing</a>
+        @endif		
     </h3>
     @yield('page')
 </div>
