@@ -20,6 +20,10 @@ class PhotoController extends Controller
         ]);
     }
 
+    function performance () {
+        return view('performance');
+    }
+
     function get_files ($dir) {
         $files = Storage::files($dir);
         $imagefiles = [];

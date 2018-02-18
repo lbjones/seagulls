@@ -74,19 +74,24 @@
 <body>
 <div id="wrapper">
     <h1>The SEAGull</h1>
-    <h2>Photos</h2>
     <h3>
         @if (route('exterior') == url()->current())
-            Exterior
+            Exterior Photos
         @else
-            <a href="{{ route('exterior') }}">Exterior</a>
+            <a href="{{ route('exterior') }}">Exterior Photos</a>
         @endif
         &nbsp;
         @if (route('interior') == url()->current())
-            Interior
+            Interior Photos
         @else
-            <a href="{{ route('interior') }}">Interior</a>
+            <a href="{{ route('interior') }}">Interior Photo</a>
         @endif
+        &nbsp;
+        @if (route('performance') == url()->current())
+            Performance Specifications
+        @else
+            <a href="{{ route('performance') }}">Performance Specifications</a>
+        @endif      
         
     </h3>
     @yield('page')
