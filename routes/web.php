@@ -23,3 +23,5 @@ Route::get('/performance', 'PhotoController@performance')->name('performance');
 
 Route::get('/information', 'PhotoController@information')->name('information');
 Route::post('/information', 'PhotoController@postInformation');
+
+Route::get('/pricing', 'PhotoController@pricing')->name('pricing');
