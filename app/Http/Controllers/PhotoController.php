@@ -37,6 +37,10 @@ class PhotoController extends Controller
         return view('pricing');
     }
 
+    function videos () {
+        return view('videos');
+    }
+
     function get_files ($dir) {
         $files = Storage::files($dir);
         $imagefiles = [];
