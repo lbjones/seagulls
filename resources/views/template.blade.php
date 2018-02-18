@@ -103,6 +103,12 @@
             Pricing
         @else
             <a href="{{ route('pricing') }}">Pricing</a>
+        @endif	
+        &nbsp;&nbsp;
+        @if (route('videos') == url()->current())
+            Videos
+        @else
+            <a href="{{ route('videos') }}">Videos</a>
         @endif		
     </h3>
     @yield('page')
