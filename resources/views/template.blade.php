@@ -80,19 +80,24 @@
         @else
             <a href="{{ route('exterior') }}">Exterior Photos</a>
         @endif
-        &nbsp;
+        &nbsp;&nbsp;
         @if (route('interior') == url()->current())
             Interior Photos
         @else
             <a href="{{ route('interior') }}">Interior Photo</a>
         @endif
-        &nbsp;
+        &nbsp;&nbsp;
         @if (route('performance') == url()->current())
             Performance Specifications
         @else
             <a href="{{ route('performance') }}">Performance Specifications</a>
         @endif      
-        
+        &nbsp;&nbsp;
+        @if (route('information') == url()->current())
+            More Information
+        @else
+            <a href="{{ route('information') }}">More Information</a>
+        @endif      
     </h3>
     @yield('page')
 </div>

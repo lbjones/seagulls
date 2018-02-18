@@ -20,3 +20,5 @@ Route::get('/exterior', 'PhotoController@exterior')->name('exterior');
 Route::get('/interior', 'PhotoController@interior')->name('interior');
 
 Route::get('/performance', 'PhotoController@performance')->name('performance');
+
+Route::get('/information', 'PhotoController@information')->name('information');

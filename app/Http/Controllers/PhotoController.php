@@ -24,6 +24,10 @@ class PhotoController extends Controller
         return view('performance');
     }
 
+    function information () {
+        return view('information');
+    }
+
     function get_files ($dir) {
         $files = Storage::files($dir);
         $imagefiles = [];
