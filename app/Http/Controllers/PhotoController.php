@@ -27,6 +27,10 @@ class PhotoController extends Controller
     function information () {
         return view('information');
     }
+    
+    function postInformation (Request $request) {
+        dd($request->all());
+    }
 
     function get_files ($dir) {
         $files = Storage::files($dir);
