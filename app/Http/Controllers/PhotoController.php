@@ -28,12 +28,17 @@ class PhotoController extends Controller
     }
     
     function postInformation (Request $r) {
-        Storage::append(storage_path() . '/information.csv',
-            implode(',', [$r->input('fname'), $r->input('lname'), $r->input('email'), $r->input('phone')])
-        );
+        $this->addToCSV([$r->input('fname'), $r->input('lname'), $r->input('email'), $r->input('phone')]);
+        
         return view('information')->with([
             'success' => true,
         ]);
+    }
+
+    function addToCSV($pieces) {
+        Storage::append(storage_path() . '/information.csv',
+            implode(',', $pieces)
+        );
     }
 
     function pricing () {
